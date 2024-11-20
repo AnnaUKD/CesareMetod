@@ -3,9 +3,9 @@ const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm
 function caesarEncrypt(text, shift) {
     return text.split('').map(char => {
         let index = alphabet.indexOf(char);
-        if (index === -1) return char; // Якщо символ не знайдений, залишаємо його без змін
+        if (index === -1) return char; 
         let newIndex = (index + shift) % alphabet.length;
-        if (newIndex < 0) newIndex += alphabet.length; // Для від'ємних зсувів
+        if (newIndex < 0) newIndex += alphabet.length;
         return alphabet[newIndex];
     }).join('');
 }
